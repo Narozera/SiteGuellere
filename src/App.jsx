@@ -2,7 +2,8 @@ import Header from "./Components/Header";
 import About from "./Sections/About";
 import Hero from "./Sections/Hero";
 import Jobs from "./Sections/Jobs";
-import Form from "./Sections/Form";
+import Contact from "./Sections/Contact";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Hero />
       <Jobs />
       <About />
-      <Form />
+      <Contact />
+      <Footer />
     </div>
   );
 }

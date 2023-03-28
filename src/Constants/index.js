@@ -1,4 +1,14 @@
-import { job, fml, cns } from "../assets";
+import {
+  job,
+  fml,
+  cns,
+  whats,
+  email,
+  timer,
+  location,
+  facebook,
+  instagram,
+} from "../assets";
 
 export const menu = [
   {
@@ -80,3 +90,49 @@ export const about = [
 ];
 
 export const form = ["Entre em Contato"];
+
+export const footerTitle = [" Redes Sociais"];
+
+export const footerText = [
+  {
+    id: 1,
+    text: "(11) 95555-7002",
+    icon: whats,
+    href: "#",
+  },
+
+  {
+    id: 2,
+    text: "felipeguellere@gmail.com",
+    icon: email,
+    href: "#",
+  },
+
+  {
+    id: 3,
+    text: "12:00 até 21:00 | Segunda a Sexta",
+    icon: timer,
+    href: "#",
+  },
+
+  {
+    id: 4,
+    text: "Praça Pádua Dias, 108",
+    icon: location,
+    href: "#",
+  },
+];
+
+export const footerIcons = [
+  {
+    id: 1,
+    icon: facebook,
+    href: "",
+  },
+
+  {
+    id: 2,
+    icon: instagram,
+    href: "",
+  },
+];

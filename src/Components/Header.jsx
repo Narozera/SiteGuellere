@@ -10,7 +10,7 @@ export default function Header() {
         <div>
           <div className="flex items-center justify-between xl:block 2xl:block">
             <a href="#">
-              <img className="h-[120px]" src="/logo.svg" alt="Logo" />
+              <img src="/logo.svg" alt="Logo" />
             </a>
             <div className="xl:hidden 2xl:hidden">
               <button
