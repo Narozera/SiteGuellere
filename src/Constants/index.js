@@ -2,6 +2,8 @@ import {
   job,
   fml,
   cns,
+  digital,
+  civil,
   whats,
   email,
   timer,
@@ -67,7 +69,7 @@ export const jobs = [
   },
   {
     id: 4,
-    img: fml,
+    img: civil,
     alt: "Civil",
     title: "Direito Civil",
     text: "O Direito Civil tem como objetivo regulamentar as relações jurídicas entre as pessoas e seus bens, visando à justiça e à segurança nas relações privadas. Esse ramo do direito trata de questões como propriedade, contratos, responsabilidade civil, direitos das pessoas vulneráveis, sucessões e patrimônio.",
@@ -75,7 +77,7 @@ export const jobs = [
   },
   {
     id: 5,
-    img: fml,
+    img: digital,
     alt: "Digital",
     title: "Direito Digital",
     text: "O Direito Digital tem como propósito regular as relações jurídicas no ambiente virtual, promovendo a segurança e a justiça nas interações online. Esse ramo do direito abrange temas como proteção de dados, privacidade, comércio eletrônico, crimes virtuais e propriedade intelectual.",

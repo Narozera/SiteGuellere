@@ -14,11 +14,11 @@ export default function Carousel() {
     <>
       <motion.div
         className="overflow-hidden mx-auto cursor-grab sm:max-w-[300px] md:max-w-[300px] lg:max-w-[650px] xl:max-w-[1000px] 2xl:max-w-[1000px]"
-        whileTap={{ cursor: "grabbing" }}
         ref={carousel}
       >
         <motion.div
           className="flex gap-12"
+          whileTap={{ cursor: "grabbing" }}
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
           initial={{ x: 200 }}

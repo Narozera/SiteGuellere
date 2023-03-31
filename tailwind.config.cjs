@@ -9,7 +9,7 @@ module.exports = {
         nunito: ["Nunito", "sans-serif"],
       },
       backgroundImage: {
-        hero: "url('/hero-image.png')",
+        hero: "url('/advogado.png')",
       },
     },
     screens: {

@@ -4,12 +4,12 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#00293F]">
       <div className="container mx-auto">
-        <div className="grid grid-cols-3">
-          <div className="my-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1">
+          <div className="my-auto sm:mx-auto md:mx-auto">
             <img src="/logo.svg" />
           </div>
 
-          <div className="mx-auto my-auto">
+          <div className="mx-auto my-auto sm:text-center md:text-center">
             <ul>
               {footerText.map((item) => (
                 <li
@@ -29,10 +29,9 @@ export default function Footer() {
             </h3>
             <div className="flex">
               {footerIcons.map((item) => (
-                <a href={item.href}>
+                <a key={item.id} href={item.href}>
                   <img
-                    className="px-2 hover:text-[18px]"
-                    key={item.id}
+                    className="px-2 hover:text-[18px] sm:pb-5 md:pb-5"
                     src={item.icon}
                   />
                 </a>
