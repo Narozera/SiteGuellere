@@ -88,7 +88,7 @@ export const jobs = [
 export const about = [
   "Formado pela Faculdade de Direito IBMEC. Pós-Graduado em Direito Digital e Compliance.",
   "Com uma carreira em Direito em constante evolução, minhas experiências incluem gerenciamento de carteira de processos, elaboração de peças processuais complexas, consultoria jurídica em diversas áreas, análise jurídica, contato com clientes e muito mais.",
-  "Consultoria",
+  "Portifólio",
 ];
 
 export const form = ["Entre em Contato"];

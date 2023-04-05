@@ -2,7 +2,7 @@ import { footerIcons, footerText, footerTitle } from "../Constants";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#00293F]">
+    <footer className="w-full bg-[#00293F] font-roboto">
       <div className="container mx-auto">
         <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1">
           <div className="my-auto sm:mx-auto md:mx-auto">
@@ -10,13 +10,13 @@ export default function Footer() {
           </div>
 
           <div className="mx-auto my-auto sm:text-center md:text-center">
-            <ul>
+            <ul className="grid grid-cols-2">
               {footerText.map((item) => (
                 <li
                   key={item.id}
                   className="my-[22px] text-[white] font-bold flex"
                 >
-                  <img className="px-2" src={item.icon} />
+                  <img className="px-2 w-[40px]" src={item.icon} />
                   <a href={item.href}>{item.text}</a>
                 </li>
               ))}

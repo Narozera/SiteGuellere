@@ -66,7 +66,7 @@ function Form() {
 
   return (
     <div className="container mx-auto">
-      <h2 className="text-center font-bold font-poppins text-[32px] text-black my-5">
+      <h2 className="text-center font-black text-[32px] text-black my-5">
         {form[0]}
       </h2>
 

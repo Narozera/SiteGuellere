@@ -7,6 +7,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
       backgroundImage: {
         hero: "url('/advogado.png')",
