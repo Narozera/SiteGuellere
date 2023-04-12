@@ -143,7 +143,7 @@ export const footerText = [
 
   {
     id: 3,
-    text: "12:00 até 21:00 | Segunda a Sexta",
+    text: "9:00 às 18:00 | Segunda a Sexta",
     icon: timer,
     href: "#",
   },
