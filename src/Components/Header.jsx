@@ -5,10 +5,13 @@ export default function Header() {
   const [navbar, setNavbar] = useState(false);
 
   return (
-    <nav className="w-full bg-[#00293F] sticky z-10 sm:max-w-[320px] md:max-w-[100%] px-[150px] lg:px-[10px] sm:px-[10px] md:px-[10px]">
+    <nav
+      className="w-full bg-[#00293F] sticky z-10 sm:max-w-[320px] md:max-w-[100%] px-[150px] lg:px-[10px] sm:px-[10px] md:px-[10px]"
+      id="nav"
+    >
       <div className="justify-between px-4 lg:flex lg:items-center lg:px-8 xl:items-center xl:flex xl:px-8 2xl:items-center 2xl:flex 2xl:px-8">
         <div className="flex items-center justify-between">
-          <a href="#">
+          <a href="#footer">
             <img className="" src="/logo.svg" alt="Logo" />
           </a>
           <div className="lg:hidden xl:hidden 2xl:hidden">

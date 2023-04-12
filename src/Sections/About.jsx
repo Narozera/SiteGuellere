@@ -4,7 +4,7 @@ import { textVariant } from "../utils/motion";
 
 export default function About() {
   return (
-    <section className="w-full bg-[#00293F] font-roboto">
+    <section className="w-full bg-[#00293F] font-roboto" id="about">
       <motion.div
         className="container mx-auto"
         initial="hidden"
@@ -30,7 +30,7 @@ export default function About() {
             <motion.button
               className="w-[465px] bg-[white] h-[50px] text-[20px] font-bold 
             
-            rounded-[20px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] sm:w-[315px] md:w-[380px] lg:w-[370px] lg:mb-10 ease-linear transition-all duration-150"
+            rounded-[20px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] sm:w-[315px] md:w-[375px] lg:w-[370px] lg:mb-10 ease-linear transition-all duration-150"
               variants={textVariant(0.8)}
             >
               {about[2]}

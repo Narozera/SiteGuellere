@@ -131,28 +131,28 @@ export const footerText = [
     id: 1,
     text: "(11) 95555-7002",
     icon: whats,
-    href: "#",
+    href: "https://api.whatsapp.com/send?phone=5511955557002",
   },
 
   {
     id: 2,
     text: "felipeguellere@gmail.com",
     icon: email,
-    href: "#",
+    href: "mailto:felipeguellere@gmail.com?subject=&body=",
   },
 
   {
     id: 3,
     text: "9:00 às 18:00 | Segunda a Sexta",
     icon: timer,
-    href: "#",
+    href: "https://www.google.com/maps/place/Praça+Pádua+Dias,+108+-+Tatuapé,+São+Paulo+-+SP,+03067-050/@-23.537782,-46.57076,17z/data=!4m6!3m5!1s0x94ce5ee85455469f:0x16b39b084be6f2c7!8m2!3d-23.5382429!4d-46.571858!16s%2Fg%2F11fjxywn1j?hl=pt-BR",
   },
 
   {
     id: 4,
     text: "Praça Pádua Dias, 108",
     icon: location,
-    href: "#",
+    href: "https://www.google.com/maps/place/Praça+Pádua+Dias,+108+-+Tatuapé,+São+Paulo+-+SP,+03067-050/@-23.537782,-46.57076,17z/data=!4m6!3m5!1s0x94ce5ee85455469f:0x16b39b084be6f2c7!8m2!3d-23.5382429!4d-46.571858!16s%2Fg%2F11fjxywn1j?hl=pt-BR",
   },
 ];
 
@@ -160,13 +160,13 @@ export const footerIcons = [
   {
     id: 1,
     icon: linkedin,
-    href: "",
+    href: "https://www.linkedin.com/in/felipeguellere/",
   },
 
   {
     id: 2,
     icon: instagram,
-    href: "",
+    href: "https://www.instagram.com/felipeguellere/?igshid=YmMyMTA2M2Y%3D",
   },
 ];
 
