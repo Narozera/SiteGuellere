@@ -10,7 +10,7 @@ export default function Footer() {
           </div>
 
           <div className="mx-auto my-auto sm:text-center md:text-center">
-            <ul className="grid grid-cols-2">
+            <ul className="">
               {footerText.map((item) => (
                 <li
                   key={item.id}
@@ -23,17 +23,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="mx-auto my-auto">
-            <h3 className="text-center pb-2 text-[20px] text-white font-bold">
+          <div className="mx-auto my-auto text-center">
+            <h3 className="pb-2 text-[20px] text-white font-bold">
               {footerTitle[0]}
             </h3>
             <div className="flex">
               {footerIcons.map((item) => (
                 <a key={item.id} href={item.href}>
-                  <img
-                    className="px-2 hover:text-[18px] sm:pb-5 md:pb-5"
-                    src={item.icon}
-                  />
+                  <img className="px-2 sm:pb-5 md:pb-5" src={item.icon} />
                 </a>
               ))}
             </div>

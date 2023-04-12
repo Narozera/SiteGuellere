@@ -57,7 +57,10 @@ export default function Header() {
           >
             <ul className="items-center justify-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0 xl:flex xl:space-x-6 xl:space-y-0 2xl:flex 2xl:space-x-6 2xl:space-y-0 font-bold text-[20px] font-roboto">
               {menu.map((item) => (
-                <li key={item.id} className="text-white hover:text-indigo-200">
+                <li
+                  key={item.id}
+                  className="text-white hover:text-indigo-200 ease-linear transition-all duration-150"
+                >
                   <a href={item.href}>{item.text}</a>
                 </li>
               ))}

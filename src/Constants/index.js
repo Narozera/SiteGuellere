@@ -8,8 +8,23 @@ import {
   email,
   timer,
   location,
-  facebook,
+  linkedin,
   instagram,
+  people,
+  building,
+  chain,
+  family,
+  checklist,
+  dish,
+  bank,
+  hospital,
+  consumer,
+  familyTree,
+  contract,
+  realEstate,
+  home,
+  shield,
+  homeOffice,
 } from "../assets";
 
 export const menu = [
@@ -36,9 +51,7 @@ export const hero = [
   "Advocacia especializada em Direito Civil, Direito de Família, Direito do Consumidor e Direito do Trabalho.",
 ];
 
-export const titleJobs = [
-  "A virtude da justiça consiste na moderação regulada pela sabedoria",
-];
+export const titleJobs = ["Áreas de atuação"];
 
 export const jobs = [
   {
@@ -85,6 +98,24 @@ export const jobs = [
   },
 ];
 
+export const textModal = [
+  {
+    title: "Direito do Trabalho",
+  },
+  {
+    title: "Direito do Consumidor",
+  },
+  {
+    title: "Direito de Família",
+  },
+  {
+    title: "Direito Civil",
+  },
+  {
+    title: "Direito Digital",
+  },
+];
+
 export const about = [
   "Formado pela Faculdade de Direito IBMEC. Pós-Graduado em Direito Digital e Compliance.",
   "Com uma carreira em Direito em constante evolução, minhas experiências incluem gerenciamento de carteira de processos, elaboração de peças processuais complexas, consultoria jurídica em diversas áreas, análise jurídica, contato com clientes e muito mais.",
@@ -128,7 +159,7 @@ export const footerText = [
 export const footerIcons = [
   {
     id: 1,
-    icon: facebook,
+    icon: linkedin,
     href: "",
   },
 
@@ -136,5 +167,99 @@ export const footerIcons = [
     id: 2,
     icon: instagram,
     href: "",
+  },
+];
+
+export const laborLaw = [
+  {
+    id: 1,
+    icon: people,
+    text: "Assessoria jurídica trabalhista ao empregado. Realização de Reclamações Trabalhistas, compreendendo todos os direitos e benefícios trabalhistas, como bono salarial, férias, licenças legais (licença maternidade e licença paternidade), adicionais previstos na legislação, ações sindicais, FGTS, 13º salário, admissões, aumento salarial, entre outros.",
+  },
+  {
+    id: 2,
+    icon: building,
+    text: "Assessoria jurídica trabalhista ao empregador. Atuação preventiva na empresa e representação processual trabalhista estratégica, levando em consideração o segmento da empresa.",
+  },
+];
+
+export const consumerLaw = [
+  {
+    id: 1,
+    icon: bank,
+    text: "Atuação em questões relacionadas a empréstimos, financiamentos, cartões de crédito, cheque especial, cobranças abusivas, dentre outros assuntos relacionados a instituições financeiras.",
+  },
+  {
+    id: 2,
+    icon: consumer,
+    text: "Atuação em defesa dos direitos do consumidor de pessoas físicas em geral, incluindo ações judiciais individuais e coletivas, consultoria e elaboração de contratos e pareceres jurídicos.",
+  },
+  {
+    id: 3,
+    icon: hospital,
+    text: "Atuação em questões relacionadas a planos de saúde, responsabilidade civil médica, produtos médicos, dentre outros assuntos relacionados a saúde.",
+  },
+];
+
+export const familyLaw = [
+  {
+    id: 1,
+    title: "Ação de Separação e Divórcio",
+    icon: chain,
+    text: "Ambos procedimentos podem ser realizados via tabelionato de notas em caso de dissolução consensual. Na hipótese de litígio, o procedimento deve ser judicial.",
+  },
+  {
+    id: 2,
+    title: "Inventários",
+    icon: checklist,
+    text: "É procedimento judicial visando a partilha de bens que não comporta o procedimento de arrolamento.",
+  },
+  {
+    id: 3,
+    title: "Pensão Alimentícia",
+    icon: dish,
+    text: "É a quantia fixada judicialmente para atender às necessidades do dependente familiar.",
+  },
+  {
+    id: 4,
+    title: "Regulamentação de Guarda e Visita",
+    icon: family,
+    text: "É a quantia fixada judicialmente para atender às necessidades do dependente familiar.",
+  },
+];
+
+export const civilLaw = [
+  {
+    id: 1,
+    icon: familyTree,
+    text: "Atuação em questões relacionadas a testamentos, heranças, partilha de bens, dentre outras",
+  },
+  {
+    id: 2,
+    icon: contract,
+    text: "Atuação em questões relacionadas a contratos, cobranças, indenizações, dentre outras.",
+  },
+  {
+    id: 3,
+    icon: realEstate,
+    text: "Atuação em questões relacionadas a contratos, cobranças, indenizações, dentre outras.",
+  },
+  {
+    id: 4,
+    icon: home,
+    text: "Atuação em questões relacionadas a propriedade, posse, usucapião, dentre outras.",
+  },
+];
+
+export const digitalLaw = [
+  {
+    id: 1,
+    icon: shield,
+    text: "Atuação em questões relacionadas à coleta, armazenamento e uso de dados pessoais, incluindo o Regulamento Geral de Proteção de Dados (RGPD) na União Europeia e a Lei Geral de Proteção de Dados (LGPD) no Brasil. Além de questões relacionadas a direitos autorais, patentes, marcas e outras formas de propriedade intelectual.",
+  },
+  {
+    id: 2,
+    icon: homeOffice,
+    text: "Atuação em questões relacionadas ao trabalho remoto, ao uso da tecnologia no ambiente de trabalho e à proteção de dados do trabalhador.",
   },
 ];
