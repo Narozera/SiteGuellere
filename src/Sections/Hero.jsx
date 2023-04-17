@@ -10,7 +10,7 @@ export default function Hero() {
     >
       <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1">
         <motion.div
-          className="flex justify-center"
+          className="flex justify-center items-center"
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
@@ -42,20 +42,20 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="flex justify-end sm:justify-center md:justify-center"
+          className="flex sm:justify-center md:justify-center justify-center"
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
         >
           <ul className="text-[white] text-[18px]  sm:text-center sm:pr-[5px] sm:list-none md:pr-[5px] md:list-none md:text-center lg:text-[16px] lg:pr-[5px] pr-[30px] text-center font-bold">
             <motion.li
-              className="w-[180px] sm:w-[280px] md:w-[300px] my-[10px] bg-white p-2 text-black shadow-md shadow-black rounded-[20px]"
+              className="w-[200px] sm:w-[280px] md:w-[300px] my-[10px] bg-white p-2 text-black shadow-md shadow-black rounded-[20px]"
               variants={textVariant(0.7)}
             >
               {hero[1]}
             </motion.li>
             <motion.li
-              className="w-[180px] sm:w-[280px] md:w-[300px] bg-white p-2 text-black shadow-md shadow-black rounded-[20px]"
+              className="w-[200px] sm:w-[280px] md:w-[300px] bg-white p-2 text-black shadow-md shadow-black rounded-[20px]"
               variants={textVariant(1)}
             >
               {hero[2]}
