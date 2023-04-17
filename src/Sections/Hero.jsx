@@ -42,7 +42,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          className="flex sm:justify-center md:justify-center justify-center"
+          className="flex justify-center"
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.25 }}
