@@ -8,6 +8,7 @@ import {
   textModal,
 } from "../../Constants/index";
 import { motion } from "framer-motion";
+import { container, item } from "../../utils/motion";
 import { useState, useRef, useEffect } from "react";
 
 export default function Carousel() {
@@ -172,19 +173,30 @@ export default function Carousel() {
 
         {showModal ? (
           <>
-            <div className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <motion.div
+              className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
                 <div
                   ref={modal}
                   className="border-0 rounded-lg shadow-lg relative flex flex-col mx-[15px] bg-[#013754] text-white outline-none focus:outline-none"
                 >
-                  <div className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t">
+                  <motion.div
+                    className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t"
+                    variants={item}
+                  >
                     <h3 className="text-3xl font-semibold">
                       {textModal[0].title}
                     </h3>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative p-6 flex flex-wrap">
+                  <motion.div
+                    className="relative p-6 flex flex-wrap"
+                    variants={item}
+                  >
                     {laborLaw.map((item) => (
                       <div className="p-3 mx-auto" key={item.id}>
                         <img
@@ -194,7 +206,7 @@ export default function Carousel() {
                         <p className="text-center">{item.text}</p>
                       </div>
                     ))}
-                  </div>
+                  </motion.div>
                   <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                     <button
                       className="flex w-full justify-center shadow bg-white text-black hover:bg-[#cbcbcb] hover:text-[white] rounded-xl font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -208,26 +220,37 @@ export default function Carousel() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black" />
           </>
         ) : null}
 
         {showModal1 ? (
           <>
-            <div className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <motion.div
+              className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
                 <div
                   ref={modal}
                   className="border-0 rounded-lg shadow-lg relative flex flex-col mx-[15px] bg-[#013754] text-white outline-none focus:outline-none"
                 >
-                  <div className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t">
+                  <motion.div
+                    className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t"
+                    variants={item}
+                  >
                     <h3 className="text-3xl font-semibold">
                       {textModal[1].title}
                     </h3>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative p-6 flex sm:flex-wrap sm:p-0 md:flex-wrap">
+                  <motion.div
+                    className="relative p-6 flex sm:flex-wrap sm:p-0 md:flex-wrap"
+                    variants={item}
+                  >
                     {consumerLaw.map((item) => (
                       <div className="p-3 mx-auto" key={item.id}>
                         <img
@@ -237,7 +260,7 @@ export default function Carousel() {
                         <p className="text-center">{item.text}</p>
                       </div>
                     ))}
-                  </div>
+                  </motion.div>
                   <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                     <button
                       className="flex w-full justify-center shadow bg-white text-black hover:bg-[#cbcbcb] hover:text-[white] rounded-xl font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -251,26 +274,37 @@ export default function Carousel() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black" />
           </>
         ) : null}
 
         {showModal2 ? (
           <>
-            <div className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <motion.div
+              className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
                 <div
                   ref={modal}
                   className="border-0 rounded-lg shadow-lg relative flex flex-col mx-[15px] bg-[#013754] text-white outline-none focus:outline-none"
                 >
-                  <div className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t">
+                  <motion.div
+                    className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t"
+                    variants={item}
+                  >
                     <h3 className="text-3xl font-semibold">
                       {textModal[2].title}
                     </h3>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative p-6 flex md:flex-wrap sm:flex-wrap sm:p-0">
+                  <motion.div
+                    className="relative p-6 flex md:flex-wrap sm:flex-wrap sm:p-0"
+                    variants={item}
+                  >
                     {familyLaw.map((item) => (
                       <div className="p-3 mx-auto" key={item.id}>
                         <img
@@ -280,7 +314,7 @@ export default function Carousel() {
                         <p className="text-center">{item.text}</p>
                       </div>
                     ))}
-                  </div>
+                  </motion.div>
                   <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                     <button
                       className="flex w-full justify-center shadow bg-white text-black hover:bg-[#cbcbcb] hover:text-[white] rounded-xl font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -294,26 +328,37 @@ export default function Carousel() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black" />
           </>
         ) : null}
 
         {showModal3 ? (
           <>
-            <div className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <motion.div
+              className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
                 <div
                   ref={modal}
                   className="border-0 rounded-lg shadow-lg relative flex flex-col mx-[15px] bg-[#013754] text-white outline-none focus:outline-none"
                 >
-                  <div className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t">
+                  <motion.div
+                    className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t"
+                    variants={item}
+                  >
                     <h3 className="text-3xl font-semibold">
                       {textModal[3].title}
                     </h3>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative p-6 flex flex-wrap sm:p-0">
+                  <motion.div
+                    className="relative p-6 flex flex-wrap sm:p-0"
+                    variants={item}
+                  >
                     {civilLaw.map((item) => (
                       <div className="p-3 mx-auto" key={item.id}>
                         <img
@@ -323,7 +368,7 @@ export default function Carousel() {
                         <p className="text-center w-[120px]">{item.text}</p>
                       </div>
                     ))}
-                  </div>
+                  </motion.div>
                   <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                     <button
                       className="flex w-full justify-center shadow bg-white text-black hover:bg-[#cbcbcb] hover:text-[white] rounded-xl font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -337,26 +382,37 @@ export default function Carousel() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black" />
           </>
         ) : null}
 
         {showModal4 ? (
           <>
-            <div className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <motion.div
+              className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
                 <div
                   ref={modal}
                   className="border-0 rounded-lg shadow-lg relative flex flex-col mx-[15px] bg-[#013754] text-white outline-none focus:outline-none"
                 >
-                  <div className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t">
+                  <motion.div
+                    className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t"
+                    variants={item}
+                  >
                     <h3 className="text-3xl font-semibold">
                       {textModal[4].title}
                     </h3>
-                  </div>
+                  </motion.div>
 
-                  <div className="relative p-6 flex flex-wrap sm:p-2">
+                  <motion.div
+                    className="relative p-6 flex flex-wrap sm:p-2"
+                    variants={item}
+                  >
                     {digitalLaw.map((item) => (
                       <div className="p-3 mx-auto" key={item.id}>
                         <img
@@ -366,7 +422,7 @@ export default function Carousel() {
                         <p className="text-center">{item.text}</p>
                       </div>
                     ))}
-                  </div>
+                  </motion.div>
                   <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
                     <button
                       className="flex w-full justify-center shadow bg-white text-black hover:bg-[#cbcbcb] hover:text-[white] rounded-xl font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -380,7 +436,7 @@ export default function Carousel() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black" />
           </>
         ) : null}

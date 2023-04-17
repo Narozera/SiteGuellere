@@ -120,6 +120,7 @@ export const about = [
   "Formado pela Faculdade de Direito IBMEC. Pós-Graduado em Direito Digital e Compliance.",
   "Com uma carreira em Direito em constante evolução, minhas experiências incluem gerenciamento de carteira de processos, elaboração de peças processuais complexas, consultoria jurídica em diversas áreas, análise jurídica, contato com clientes e muito mais.",
   "Portifólio",
+  "No ano de 2022 até o começo de 2023 atuei como advogado em um escritório de advocacia, gerenciando uma carteira de aproximadamente 90 processos. Atualmente estou prestando serviços de assessoria jurídica para uma empresa privada, lidando com as ações trabalhistas e no gerenciamento comercial da empresa. Desempenhei por 01 ano no Direito de Família, com mais de 10 clientes satisfeitos com um trabalho profissional e transparente. Pretendo tratar meus futuros clientes com excelência, respeito e integridade, se atentando especificamente na causa e nas condições do contratante.",
 ];
 
 export const form = ["Entre em Contato"];
@@ -143,7 +144,7 @@ export const footerText = [
 
   {
     id: 3,
-    text: "9:00 às 18:00 | Segunda a Sexta",
+    text: "9:00 às 18:00 | Segunda-feira a Sexta-feira",
     icon: timer,
     href: "https://www.google.com/maps/place/Praça+Pádua+Dias,+108+-+Tatuapé,+São+Paulo+-+SP,+03067-050/@-23.537782,-46.57076,17z/data=!4m6!3m5!1s0x94ce5ee85455469f:0x16b39b084be6f2c7!8m2!3d-23.5382429!4d-46.571858!16s%2Fg%2F11fjxywn1j?hl=pt-BR",
   },

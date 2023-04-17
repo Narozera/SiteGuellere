@@ -1,8 +1,13 @@
 import { about } from "../Constants";
 import { motion } from "framer-motion";
-import { textVariant } from "../utils/motion";
+import { textVariant, container, item } from "../utils/motion";
+import { useState, useRef } from "react";
 
 export default function About() {
+  const [showModal, setShowModal] = useState(false);
+
+  const modal = useRef();
+
   return (
     <section className="w-full bg-[#00293F] font-roboto" id="about">
       <motion.div
@@ -31,12 +36,56 @@ export default function About() {
               className="w-[465px] bg-[white] h-[50px] text-[20px] font-bold 
             
             rounded-[20px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] sm:w-[315px] md:w-[375px] lg:w-[370px] lg:mb-10 ease-linear transition-all duration-150"
+              onClick={() => setShowModal(true)}
               variants={textVariant(0.8)}
             >
               {about[2]}
             </motion.button>
           </div>
         </div>
+        {showModal ? (
+          <>
+            <motion.div
+              className="justify-center items-center flex modal-open-animation overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
+              <div className="relative w-auto my-6 mx-auto max-w-3xl">
+                <div
+                  ref={modal}
+                  className="border-0 rounded-lg shadow-lg relative flex flex-col mx-[15px] bg-[#013754] text-white outline-none focus:outline-none"
+                >
+                  <motion.div
+                    className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t"
+                    variants={item}
+                  >
+                    <h3 className="text-3xl font-semibold">{about[2]}</h3>
+                  </motion.div>
+
+                  <motion.div
+                    className="relative p-6 flex flex-wrap"
+                    variants={item}
+                  >
+                    <div className="p-3 mx-auto">
+                      <p className="text-center">{about[3]}</p>
+                    </div>
+                  </motion.div>
+                  <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                    <button
+                      className="flex w-full justify-center shadow bg-white text-black hover:bg-[#cbcbcb] hover:text-[white] rounded-xl font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Fechar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            <div className="opacity-25 fixed inset-0 z-40 bg-black" />
+          </>
+        ) : null}
       </motion.div>
     </section>
   );
