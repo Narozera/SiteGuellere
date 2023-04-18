@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Styles from "./Styles/form.css";
+import axios from "axios";
 import { form } from "../Constants";
 
 function Form() {
@@ -15,19 +16,34 @@ function Form() {
 
     setData((prev) => {
       const newData = { ...prev, [name]: value };
-
       return newData;
     });
   };
 
-  const handleClick = () => {
+  const handleClick = (event) => {
     setData({
       fullName: "",
       email: "",
       phone: "",
       message: "",
     });
+    event.preventDefault();
+    send(data);
   };
+
+  function send() {
+    const formData = new FormData();
+    Object.keys(data).forEach((key) => formData.append(key, data[key]));
+    axios
+      .post("/send", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        console.log(response.data);
+      });
+  }
 
   const calculateProgress = () => {
     let value = 0;
@@ -74,7 +90,10 @@ function Form() {
         <div className="bar" style={{ width: `${calculateProgress()}%` }}></div>
       </div>
 
-      <form className="px-4 py-5 max-w-7xl mx-auto space-y-6">
+      <form
+        className="px-4 py-5 max-w-7xl mx-auto space-y-6"
+        onSubmit={handleClick}
+      >
         <div className="flex space-x-4">
           <div className="w-1/2">
             <input
@@ -124,7 +143,6 @@ function Form() {
 
         <div>
           <button
-            onClick={handleClick}
             disabled={calculateProgress() !== 100}
             className={
               calculateProgress() !== 100
