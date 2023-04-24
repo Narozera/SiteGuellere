@@ -31,11 +31,11 @@ export default function Hero() {
         >
           <motion.img
             className="absolute top-[150px] h-[500px] z-10"
-            src="/img-hero.svg"
+            src="/prancheta.svg"
             variants={textVariant(0.3)}
           />
           <motion.img
-            className="mt-30"
+            className=""
             src="balao-hero.svg"
             variants={textVariant(0.3)}
           />
