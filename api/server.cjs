@@ -19,6 +19,6 @@ app.post("/send", (req, res, next) => {
 
 app.use(express.static(path.join(__dirname, "../dist")));
 
-app.listen(3000, () => {
+app.listen("https://site-guellere.vercel.app", () => {
   console.log("server start");
 });
