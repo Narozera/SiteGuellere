@@ -41,7 +41,10 @@ function Form() {
         },
       })
       .then((response) => {
-        console.log(response.data);
+        alert("Email enviado com sucesso!");
+      })
+      .catch((response) => {
+        alert("Ocorreu um erro, por favor tente novamente");
       });
   }
 
