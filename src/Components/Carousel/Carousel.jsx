@@ -242,7 +242,7 @@ export default function Carousel() {
                     className="flex items-center justify-center p-5 border-b border-solid border-slate-200 rounded-t"
                     variants={item}
                   >
-                    <h3 className="text-3xl font-semibold">
+                    <h3 className="text-3xl font-semibold text-center">
                       {textModal[1].title}
                     </h3>
                   </motion.div>
