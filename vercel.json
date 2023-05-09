@@ -11,6 +11,8 @@
         "src": "/api/.", 
         "dest": "/server.cjs" 
       }
-    ]
+    ], "env": {
+        "PORT": 3000
+    }
   }
   
