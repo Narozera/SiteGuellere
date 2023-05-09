@@ -8,11 +8,9 @@
     ],
     "routes": [
       {
-        "src": "/api/.", 
-        "dest": "api/server.cjs" 
+        "src": "/(.*)", 
+        "dest": "/" 
       }
-    ], "env": {
-        "PORT": "3000"
-    }
+    ]
   }
   

@@ -6,6 +6,7 @@ const app = express();
 app.use(require("cors")());
 app.use(express.json());
 
+
 app.post("/send", (req, res, next) => {
   const fullName = req.body.fullName;
   const phone = req.body.phone;
@@ -17,8 +18,14 @@ app.post("/send", (req, res, next) => {
     .catch((error) => res.status(500).json(error));
 });
 
+const port = process.env.PORT || 3000;
+
 app.use(express.static(path.join(__dirname, "../dist")));
 
-app.listen(process.env.PORT || 3000, () => {
+app.get("/", (req, res) => {
+  return res.json("hello world!");
+})
+
+app.listen(port, () => {
   console.log("server start");
 });
