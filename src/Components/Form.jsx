@@ -31,11 +31,13 @@ function Form() {
     send(data);
   };
 
+  const baseUrl = "https://api-guellas.vercel.app";
+
   function send() {
     const formData = new FormData();
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
     axios
-      .post("/send", formData, {
+      .post(`${baseUrl}/send`, formData, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -80,7 +82,6 @@ function Form() {
 
     return value;
   };
-
   calculateProgress();
 
   return (
