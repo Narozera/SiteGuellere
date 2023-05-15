@@ -94,10 +94,7 @@ function Form() {
         <div className="bar" style={{ width: `${calculateProgress()}%` }}></div>
       </div>
 
-      <form
-        className="px-4 py-5 max-w-7xl mx-auto space-y-6"
-        onSubmit={handleClick}
-      >
+      <form className="px-4 py-5 max-w-7xl mx-auto space-y-6">
         <div className="flex space-x-4">
           <div className="w-1/2">
             <input
@@ -153,6 +150,7 @@ function Form() {
                 ? `w-full bg-[#A9A9A9] font-bold py-auto px-auto rounded-full h-[60px] text-[16px] text-white my-5`
                 : `w-full bg-[#00293F] font-bold py-auto px-auto rounded-full h-[60px] text-[16px] text-white my-5 hover:bg-[#013754] ease-linear transition-all duration-150`
             }
+            onClick={handleClick}
           >
             Enviar
           </button>
