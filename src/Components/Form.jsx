@@ -47,6 +47,7 @@ function Form() {
       })
       .catch((response) => {
         alert("Ocorreu um erro, por favor tente novamente");
+        alert(response);
       });
   }
 
