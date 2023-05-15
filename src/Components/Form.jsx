@@ -20,17 +20,6 @@ function Form() {
     });
   };
 
-  const handleClick = (event) => {
-    setData({
-      fullName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
-    event.preventDefault();
-    send(data);
-  };
-
   const baseUrl = "https://api-guellas.vercel.app";
 
   function send() {
@@ -47,9 +36,19 @@ function Form() {
       })
       .catch((response) => {
         alert("Ocorreu um erro, por favor tente novamente");
-        alert(response);
       });
   }
+
+  const handleClick = (event) => {
+    setData({
+      fullName: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+    event.preventDefault();
+    send(data);
+  };
 
   const calculateProgress = () => {
     let value = 0;
