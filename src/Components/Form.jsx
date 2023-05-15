@@ -31,7 +31,7 @@ function Form() {
     send(data);
   };
 
-  const baseUrl = "https://api-guellas.vercel.app";
+  const baseUrl = "https://api-guellas-git-main-narozera.vercel.app";
 
   function send() {
     const formData = new FormData();
