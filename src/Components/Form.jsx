@@ -20,13 +20,13 @@ function Form() {
     });
   };
 
-  const baseUrl = "https://api-guellas.vercel.app";
+  const baseUrl = "https://api-guellas.vercel.app/send";
 
   function send() {
     const formData = new FormData();
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
     axios
-      .post(`${baseUrl}/send`, formData, {
+      .post(baseUrl, formData, {
         headers: {
           "Content-Type": "application/json",
         },
