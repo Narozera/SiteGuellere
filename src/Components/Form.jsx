@@ -26,7 +26,7 @@ function Form() {
     const formData = new FormData();
     Object.keys(data).forEach((key) => formData.append(key, data[key]));
     axios
-      .post(baseUrl + "/send", formData, {
+      .post(`${baseUrl}/send`, formData, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -94,7 +94,10 @@ function Form() {
         <div className="bar" style={{ width: `${calculateProgress()}%` }}></div>
       </div>
 
-      <form className="px-4 py-5 max-w-7xl mx-auto space-y-6">
+      <form
+        className="px-4 py-5 max-w-7xl mx-auto space-y-6"
+        onSubmit={handleClick}
+      >
         <div className="flex space-x-4">
           <div className="w-1/2">
             <input
@@ -150,7 +153,6 @@ function Form() {
                 ? `w-full bg-[#A9A9A9] font-bold py-auto px-auto rounded-full h-[60px] text-[16px] text-white my-5`
                 : `w-full bg-[#00293F] font-bold py-auto px-auto rounded-full h-[60px] text-[16px] text-white my-5 hover:bg-[#013754] ease-linear transition-all duration-150`
             }
-            onClick={handleClick}
           >
             Enviar
           </button>
