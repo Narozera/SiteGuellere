@@ -4,22 +4,6 @@ import axios from "axios";
 import { form } from "../Constants";
 
 function Form() {
-  const [data, setData] = useState({
-    fullName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setData((prev) => {
-      const newData = { ...prev, [name]: value };
-      return newData;
-    });
-  };
-
   const baseUrl = "https://api-guellas.vercel.app";
 
   function send() {
@@ -38,6 +22,22 @@ function Form() {
         alert("Ocorreu um erro, por favor tente novamente");
       });
   }
+
+  const [data, setData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setData((prev) => {
+      const newData = { ...prev, [name]: value };
+      return newData;
+    });
+  };
 
   const handleClick = (event) => {
     setData({
