@@ -137,9 +137,9 @@ export const footerText = [
 
   {
     id: 2,
-    text: "felipeguellere@gmail.com",
+    text: "contato@felipeguellereadvocacia.com.br",
     icon: email,
-    href: "mailto:felipeguellere@gmail.com?subject=&body=",
+    href: "mailto:contato@felipeguellereadvocacia.com.br?subject=&body=",
   },
 
   {
