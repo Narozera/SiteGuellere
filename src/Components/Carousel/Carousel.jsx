@@ -10,10 +10,13 @@ import {
 import { motion } from "framer-motion";
 import { container, item } from "../../utils/motion";
 import { useState, useRef, useEffect } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./style.css";
 
 export default function Carousel() {
   const carousel = useRef();
-  const [width, setWidth] = useState(0);
 
   const [showModal, setShowModal] = useState(false);
   const [showModal1, setShowModal1] = useState(false);
@@ -23,152 +26,156 @@ export default function Carousel() {
 
   const modal = useRef();
 
-  useEffect(() => {
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
-  }, []);
+  const settings = {
+    arrows: true,
+    infinite: true,
+    center: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          arrows: true,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
-      <motion.div
-        className="overflow-hidden mx-auto cursor-grab sm:max-w-[300px] md:max-w-[300px] lg:max-w-[650px] xl:max-w-[1000px] 2xl:max-w-[1000px]"
-        ref={carousel}
-      >
+      <motion.div className="mx-auto cursor-grab" ref={carousel}>
         <motion.div
-          className="flex gap-12"
+          className=""
           whileTap={{ cursor: "grabbing" }}
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
           initial={{ x: 200 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* {jobs.map((item) => (
-            <motion.div key={item.id} className="text-center mx-auto">
+          <Slider {...settings} className="cursor-pointer">
+            <motion.div className="text-center mx-auto">
               <img
                 className="mx-auto mt-10 h-[80px] w-[80px]"
-                alt={item.alt}
-                src={item.img}
+                alt={jobs[0].alt}
+                src={jobs[0].img}
               />
-              <h3 className="my-5 text-[white] text-[20px] font-bold max-w-[300px]">
-                {item.title}
+              <h3 className="my-5 mx-auto  text-[white] text-[20px] font-bold max-w-[300px]">
+                {jobs[0].title}
               </h3>
-              <p className="my-5 text-[white] max-w-[300px] h-[180px]">
-                {item.text}
+              <p className="my-5 mx-auto text-[white] max-w-[300px] h-[180px]">
+                {jobs[0].text}
               </p>
 
               <button
                 className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
                 onClick={() => setShowModal(true)}
               >
-                {item.button}
+                {jobs[0].button}
               </button>
             </motion.div>
-          ))} */}
 
-          <motion.div className="text-center mx-auto">
-            <img
-              className="mx-auto mt-10 h-[80px] w-[80px]"
-              alt={jobs[0].alt}
-              src={jobs[0].img}
-            />
-            <h3 className="my-5 text-[white] text-[20px] font-bold max-w-[300px]">
-              {jobs[0].title}
-            </h3>
-            <p className="my-5 text-[white] max-w-[300px] h-[180px]">
-              {jobs[0].text}
-            </p>
+            <motion.div className="text-center mx-auto">
+              <img
+                className="mx-auto mt-10 h-[80px] w-[80px]"
+                alt={jobs[1].alt}
+                src={jobs[1].img}
+              />
+              <h3 className="my-5 mx-auto text-[white] text-[20px] font-bold max-w-[300px]">
+                {jobs[1].title}
+              </h3>
+              <p className="my-5 mx-auto text-[white] max-w-[300px] h-[180px]">
+                {jobs[1].text}
+              </p>
 
-            <button
-              className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
-              onClick={() => setShowModal(true)}
-            >
-              {jobs[0].button}
-            </button>
-          </motion.div>
+              <button
+                className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
+                onClick={() => setShowModal1(true)}
+              >
+                {jobs[1].button}
+              </button>
+            </motion.div>
 
-          <motion.div className="text-center mx-auto">
-            <img
-              className="mx-auto mt-10 h-[80px] w-[80px]"
-              alt={jobs[1].alt}
-              src={jobs[1].img}
-            />
-            <h3 className="my-5 text-[white] text-[20px] font-bold max-w-[300px]">
-              {jobs[1].title}
-            </h3>
-            <p className="my-5 text-[white] max-w-[300px] h-[180px]">
-              {jobs[1].text}
-            </p>
+            <motion.div className="text-center mx-auto">
+              <img
+                className="mx-auto mt-10 h-[80px] w-[80px]"
+                alt={jobs[2].alt}
+                src={jobs[2].img}
+              />
+              <h3 className="my-5 mx-auto text-[white] text-[20px] font-bold max-w-[300px]">
+                {jobs[2].title}
+              </h3>
+              <p className="my-5 mx-auto text-[white] max-w-[300px] h-[180px]">
+                {jobs[2].text}
+              </p>
 
-            <button
-              className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
-              onClick={() => setShowModal1(true)}
-            >
-              {jobs[1].button}
-            </button>
-          </motion.div>
+              <button
+                className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
+                onClick={() => setShowModal2(true)}
+              >
+                {jobs[2].button}
+              </button>
+            </motion.div>
 
-          <motion.div className="text-center mx-auto">
-            <img
-              className="mx-auto mt-10 h-[80px] w-[80px]"
-              alt={jobs[2].alt}
-              src={jobs[2].img}
-            />
-            <h3 className="my-5 text-[white] text-[20px] font-bold max-w-[300px]">
-              {jobs[2].title}
-            </h3>
-            <p className="my-5 text-[white] max-w-[300px] h-[180px]">
-              {jobs[2].text}
-            </p>
+            <motion.div className="text-center mx-auto">
+              <img
+                className="mx-auto mt-10 h-[80px] w-[80px]"
+                alt={jobs[3].alt}
+                src={jobs[3].img}
+              />
+              <h3 className="my-5 mx-auto text-[white] text-[20px] font-bold max-w-[300px]">
+                {jobs[3].title}
+              </h3>
+              <p className="my-5 mx-auto text-[white] max-w-[300px] h-[180px]">
+                {jobs[3].text}
+              </p>
 
-            <button
-              className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
-              onClick={() => setShowModal2(true)}
-            >
-              {jobs[2].button}
-            </button>
-          </motion.div>
+              <button
+                className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
+                onClick={() => setShowModal3(true)}
+              >
+                {jobs[3].button}
+              </button>
+            </motion.div>
 
-          <motion.div className="text-center mx-auto">
-            <img
-              className="mx-auto mt-10 h-[80px] w-[80px]"
-              alt={jobs[3].alt}
-              src={jobs[3].img}
-            />
-            <h3 className="my-5 text-[white] text-[20px] font-bold max-w-[300px]">
-              {jobs[3].title}
-            </h3>
-            <p className="my-5 text-[white] max-w-[300px] h-[180px]">
-              {jobs[3].text}
-            </p>
+            <motion.div className="text-center mx-auto">
+              <img
+                className="mx-auto mt-10 h-[80px] w-[80px]"
+                alt={jobs[4].alt}
+                src={jobs[4].img}
+              />
+              <h3 className="my-5 mx-auto text-[white] text-[20px] font-bold max-w-[300px]">
+                {jobs[4].title}
+              </h3>
+              <p className="my-5 mx-auto text-[white] max-w-[300px] h-[180px]">
+                {jobs[4].text}
+              </p>
 
-            <button
-              className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
-              onClick={() => setShowModal3(true)}
-            >
-              {jobs[3].button}
-            </button>
-          </motion.div>
-
-          <motion.div className="text-center mx-auto">
-            <img
-              className="mx-auto mt-10 h-[80px] w-[80px]"
-              alt={jobs[4].alt}
-              src={jobs[4].img}
-            />
-            <h3 className="my-5 text-[white] text-[20px] font-bold max-w-[300px]">
-              {jobs[4].title}
-            </h3>
-            <p className="my-5 text-[white] max-w-[300px] h-[180px]">
-              {jobs[4].text}
-            </p>
-
-            <button
-              className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
-              onClick={() => setShowModal4(true)}
-            >
-              {jobs[4].button}
-            </button>
-          </motion.div>
+              <button
+                className="bg-white w-[300px] cursor-pointer hover:bg-[#cbcbcb] hover:text-[white] font-bold py-2 px-4 rounded ease-linear transition-all duration-150"
+                onClick={() => setShowModal4(true)}
+              >
+                {jobs[4].button}
+              </button>
+            </motion.div>
+          </Slider>
         </motion.div>
 
         {showModal ? (

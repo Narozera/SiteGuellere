@@ -1,0 +1,15 @@
+.slick-prev:before {
+  color: white !important;
+  font-size: 25px !important;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: -30px !important;
+}
+
+.slick-next:before {
+  color: white !important;
+  font-size: 25px !important;
+  z-index: 1;
+}
