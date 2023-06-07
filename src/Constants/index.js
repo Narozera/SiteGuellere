@@ -167,7 +167,7 @@ export const footerIcons = [
   {
     id: 2,
     icon: instagram,
-    href: "https://www.instagram.com/felipeguellere/?igshid=YmMyMTA2M2Y%3D",
+    href: "https://www.instagram.com/adv.felipeguellere/?igshid=MzRlODBiNWFlZA%3D%3D",
   },
 ];
 
