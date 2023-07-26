@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "./Styles/form.css";
+import "./Styles/form.css";
 import axios from "axios";
 import { form } from "../Constants";
 

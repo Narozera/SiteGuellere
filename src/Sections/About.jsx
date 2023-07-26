@@ -21,6 +21,7 @@ export default function About() {
             <motion.img
               className="sm:rounded-full md:rounded-full lg:rounded-full"
               src="/guellas.png"
+              alt="Felipe Guellere"
               variants={textVariant(1)}
             />
           </div>

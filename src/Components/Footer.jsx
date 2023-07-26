@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1">
           <div className="my-auto sm:mx-auto md:mx-auto">
             <a href="#nav">
-              <img src="/logo.svg" />
+              <img src="/logo.svg" alt="Logo" />
             </a>
           </div>
 
@@ -18,7 +18,11 @@ export default function Footer() {
                   key={item.id}
                   className="my-[22px] text-[white] font-bold flex sm:justify-center md:justify-center"
                 >
-                  <img className="px-2 w-[40px]" src={item.icon} />
+                  <img
+                    className="px-2 w-[40px]"
+                    src={item.icon}
+                    alt={item.alt}
+                  />
 
                   <a
                     href={item.href}
@@ -39,7 +43,11 @@ export default function Footer() {
             <div className="flex">
               {footerIcons.map((item) => (
                 <a key={item.id} href={item.href} target="_blank">
-                  <img className="px-2 sm:pb-5 md:pb-5" src={item.icon} />
+                  <img
+                    className="px-2 sm:pb-5 md:pb-5"
+                    src={item.icon}
+                    alt={item.alt}
+                  />
                 </a>
               ))}
             </div>

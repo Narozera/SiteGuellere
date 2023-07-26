@@ -12,7 +12,7 @@ export default function Header() {
       <div className="justify-between px-4 lg:flex lg:items-center lg:px-8 xl:items-center xl:flex xl:px-8 2xl:items-center 2xl:flex 2xl:px-8">
         <div className="flex items-center justify-between">
           <a href="#footer">
-            <img className="" src="/logo.svg" alt="Logo" />
+            <img src="/logo.svg" alt="Logo" />
           </a>
           <div className="lg:hidden xl:hidden 2xl:hidden">
             <button

@@ -1,5 +1,5 @@
 import Carousel from "../Components/Carousel/Carousel";
-import { jobs, titleJobs } from "../Constants";
+import { titleJobs } from "../Constants";
 
 export default function Jobs() {
   return (

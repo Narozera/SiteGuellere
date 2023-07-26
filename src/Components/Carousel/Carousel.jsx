@@ -9,7 +9,7 @@ import {
 } from "../../Constants/index";
 import { motion } from "framer-motion";
 import { container, item } from "../../utils/motion";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -209,6 +209,7 @@ export default function Carousel() {
                         <img
                           className="mx-auto h-[60px] mb-3"
                           src={item.icon}
+                          alt={item.alt}
                         />
                         <p className="text-center">{item.text}</p>
                       </div>
@@ -263,6 +264,7 @@ export default function Carousel() {
                         <img
                           className="mx-auto h-[60px] mb-3"
                           src={item.icon}
+                          alt={item.alt}
                         />
                         <p className="text-center">{item.text}</p>
                       </div>
@@ -317,6 +319,7 @@ export default function Carousel() {
                         <img
                           className="mx-auto h-[60px] mb-3"
                           src={item.icon}
+                          alt={item.alt}
                         />
                         <p className="text-center">{item.text}</p>
                       </div>
@@ -371,6 +374,7 @@ export default function Carousel() {
                         <img
                           className="mx-auto h-[60px] mb-3"
                           src={item.icon}
+                          alt={item.alt}
                         />
                         <p className="text-center w-[120px]">{item.text}</p>
                       </div>
@@ -425,6 +429,7 @@ export default function Carousel() {
                         <img
                           className="mx-auto h-[60px] mb-3"
                           src={item.icon}
+                          alt={item.alt}
                         />
                         <p className="text-center">{item.text}</p>
                       </div>
